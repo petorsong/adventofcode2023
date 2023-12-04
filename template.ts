@@ -1,7 +1,6 @@
 // p1: 
+const input = await Deno.readTextFile('./test');
 
-const input = await Deno.readTextFile('./input');
+const result = input.split('\n');
 
-const lines = input.split('\n');
-
-console.log(lines);
+console.log(result);
