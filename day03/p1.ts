@@ -1,7 +1,7 @@
 // p1: 550064
 const input = await Deno.readTextFile('./input');
 
-const addToHash = (hash, key) => {
+const addToHash = (hash:any, key:string) => {
     if (hash.hasOwnProperty(key)) {
         hash[key]++; // If the key exists in the hashmap, increment the count
     } else {
