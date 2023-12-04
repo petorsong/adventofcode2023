@@ -7,7 +7,7 @@ const result = input.split('\n') // split by line
       .filter(str => /^\d+$/.test(str)) // drop non-numbers
       .map(str => parseInt(str, 10))) // convert to numbers
     .map(half => half.toSorted((a, b) => a - b))) // sort asc
-  .map(line =>line[0].filter(item => line[1].indexOf(item) !== -1)) // find matches
+  .map(line => line[0].filter(item => line[1].indexOf(item) !== -1)) // find matches
   .filter(matches => matches.length > 0) // drop 0 matches
   .reduce((sum, matches) => sum + 2**(matches.length - 1), 0) // sum point values
 ;
